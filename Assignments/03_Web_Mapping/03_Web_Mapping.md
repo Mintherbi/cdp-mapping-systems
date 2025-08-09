@@ -7,7 +7,7 @@ Clone the following repository to your local machine: https://github.com/mapping
 
 ## 2. Obtain a HAR File
 Use your web browser to navigate to a website of your choice. Open the developer tools and go to the `Network` tab. Make sure to clear any existing logs, then refresh the page to capture all requests made by the browser. Once the page has fully loaded, navigate around a bit. You should see a stream of requests. In the tab's menu bar, you should see an icon that indicates that network traffic is being recorded, as well as an option to download the HAR file. Click on the download icon to save the HAR file to your local machine. The below example shows the `Network` tab in Chrome:
-![Network tab in chrome](images/web-mapping-1.png)
+![Network tab in chrome](../images/web-mapping-1.png)
 
 Save the HAR file in the `inputs` directory in the newly cloned repo.
 

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Naver Network Traffic Map</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+</head>
+<body>
+  <header>
+    <h1>www.naver.com – Network Traffic Map</h1>
+    <p class="subhead">Visualization of request locations derived from a HAR capture (South Korea)</p>
+  </header>
+
+  <main>
+    <section id="about" class="card">
+      <h2>About this page</h2>
+      <ul class="meta">
+        <li><strong>Target site:</strong> www.naver.com</li>
+        <li><strong>Data source:</strong> ip_locations.geojson (derived from HAR)</li>
+        <li><strong>Capture date:</strong> 2025-08-08 (replace with your capture date)</li>
+        <li><strong>Note:</strong> This is a static visualization of geolocated IPs contacted while loading/browsing the site.</li>
+      </ul>
+    </section>
+
+    <div id="status" aria-live="polite">Loading network locations for www.naver.com…</div>
+    <div id="map" aria-label="map"></div>
+
+    <aside class="legend card">
+      <h3>Legend</h3>
+      <div class="legend-row">
+        <span class="dot dot-req"></span> Request locations (circle markers)
+      </div>
+      <div class="legend-note">Popup shows feature properties extracted during geolocation.</div>
+    </aside>
+  </main>
+
+  <footer>
+    <small>
+      Privacy notice: HAR files may contain sensitive headers or tokens. Only use sanitized data.
+      Map tiles © OpenStreetMap contributors.
+    </small>
+  </footer>
+
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
